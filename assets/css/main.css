@@ -136,6 +136,8 @@ html {
 }
 .hero_section-banner {
   opacity: 0.8;
+  background-position: center center;
+  background-size: cover;
 }
 
 .content_section {
@@ -156,6 +158,39 @@ html {
 .content_section ol h6 {
   display: inline;
   font-family: "Klavika Md";
+}
+
+.form_section {
+  display: flex;
+}
+.form_section li {
+  width: 50%;
+}
+.form_section input, .form_section textarea {
+  width: 80%;
+  background-color: #f5f6f7;
+  border: 0;
+  padding: 18px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+.form_section textarea, .form_section button {
+  float: right;
+  clear: both;
+}
+.form_section button {
+  font-family: "Klavika Md";
+  height: 40px;
+  color: #ffffff;
+  border-radius: 6px;
+  border: 0;
+  background-color: #da3a35;
+  min-width: 140px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form_section button:hover {
+  background-color: #9f1f14;
 }
 
 .grey_section {
@@ -235,8 +270,10 @@ html {
 /* --- LAYOUT ---*/
 .about_us-banner {
   background-image: url("../imgs/about_us.jpg");
-  background-position: center center;
-  background-size: cover;
+}
+
+.contact_us-banner {
+  background-image: url("../imgs/contact_us-banner.jpg");
 }
 
 /* --- COMPONENT ---*/

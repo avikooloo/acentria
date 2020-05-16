@@ -28,6 +28,8 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
     background-color: $color_black;
     &-banner{
         opacity:0.8;
+        background-position: center center;
+        background-size: cover;
     }
 }
 .content{
@@ -48,6 +50,38 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
                 display: inline;
                 font-family:$Klavika_medium;
             }
+        }
+    }
+}
+.form_section{
+    display: flex;
+    li{
+        width:50%;
+    }
+    input,textarea{
+        width: 80%;
+        background-color: #f5f6f7;
+        border: 0;
+        padding:18px 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+    }
+    textarea,button{
+        float: right;
+        clear: both;
+    }
+    button{
+        font-family: $Klavika_medium;
+        height: 40px;
+        color: $color_white;
+        border-radius: 6px;
+        border: 0;
+        background-color:#da3a35;
+        min-width: 140px;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover{
+            background-color: $color_maron;
         }
     }
 }
