@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Klavika Lt';
+    src: url('../fonts/Klavika-Light.woff2') format('woff2'),
+        url('../fonts/Klavika-Light.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika Md';
+    src: url('../fonts/Klavika-Medium.woff2') format('woff2'),
+        url('../fonts/Klavika-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika Bd';
+    src: url('../fonts/Klavika-Bold.woff2') format('woff2'),
+        url('../fonts/Klavika-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* --- FONT FACE VARIABLE --- */
+$Klavika_light: 'Klavika Lt';
+$Klavika_medium: 'Klavika Md';
+$Klavika_bold: 'Klavika Bd';

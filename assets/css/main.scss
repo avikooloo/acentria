@@ -1,0 +1,22 @@
+/* --- HELPERS ---*/
+@import 'scss/helpers/mixins';
+
+/* --- BASE ---*/
+@import 'scss/base/colors';
+@import 'scss/base/reset';
+@import 'scss/base/space';
+@import 'scss/base/typography';
+@import 'scss/base/general';
+//@import 'scss/base/variables';
+
+/* --- LAYOUT ---*/
+@import 'scss/layout/templates';
+
+/* --- COMPONENT ---*/
+@import 'scss/components/header';
+//@import 'scss/component/buttons';
+//@import 'scss/component/breadcrumbs';
+//@import 'scss/component/location_search';
+//@import 'scss/component/pagination';
+//@import 'scss/component/filters';
+//@import 'scss/component/forms';

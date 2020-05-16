@@ -1,0 +1,25 @@
+$base_1:6px;
+$base_2:12px;
+$base_3:18px;
+$base_4:24px;
+$base_5:30px;
+$base_6:36px;
+$base_7:42px;
+$base_8:48px;
+$base_9:54px;
+$base_10:60px;
+$base_12:72px;
+$base_15:90px;
+$base_16:96px;
+$base_18:108px;
+$base_20:120px;
+.container{
+    @include mq-min(desktop){
+        width: 1280px;
+        margin: auto;
+    }
+    @include mq-max(desktop){
+        margin-left:$base_4;
+        margin-right:$base_4;
+    }
+}

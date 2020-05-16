@@ -1,0 +1,41 @@
+.header{
+    &_inside-page{
+        background: url('../imgs/header_bg.gif');
+        .page_logo{
+            width:280px;
+        }
+    }
+}
+.main_menu{
+    position: absolute;
+    top: 36px;
+    left: 300px;
+    font-size: 13px;
+    li{
+        display: inline-block;
+        padding: 0 18px;
+
+    }
+    a{
+        color: $color_white;
+        font-family: $Klavika_bold;
+        text-decoration: none;
+        &:hover{
+            color: #320b0a;
+        }
+        &.active{
+            color: #320b0a;
+        }
+    }
+}
+.top_strip{
+    background-color: $color_black;
+    color: #da3832;
+    font-family: $Klavika_medium;
+    padding:12px 0;
+    .contacts{
+        font-size: 11px;
+        li{
+            display: inline-block;}
+    }
+}
