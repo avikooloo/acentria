@@ -155,12 +155,12 @@ html {
   background-size: cover;
 }
 .hero_section-slider {
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   position: relative;
 }
 
 .slider-1, .slider-2, .slider-3 {
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -345,6 +345,36 @@ html {
 .btn_one:hover {
   color: #ffffff;
   background-color: #006699;
+}
+
+.arrow {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-top: 10px solid #ffffff;
+  border-right: 10px solid #ffffff;
+}
+.arrow-right {
+  transform: rotate(45deg);
+}
+.arrow-left {
+  transform: rotate(-135deg);
+}
+
+.slide_content {
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  transform: translateY(-52%);
+}
+.slide_content h2 {
+  color: #ffffff;
+  font-family: "Klavika Bd";
+  padding-left: 50px;
+  font-size: 38px;
+  float: left;
+  width: 40%;
+  line-height: 42px;
 }
 
 @media only screen and (min-width: 1024px) {

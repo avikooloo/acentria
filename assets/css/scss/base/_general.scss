@@ -46,12 +46,12 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
         background-size: cover;
     }
     &-slider{
-        background-color: $color_white;
+        background-color: $color_grey;
         position: relative;
     }
 }
 .slider-1,.slider-2,.slider-3{
-    background-position: center;
+    background-position:top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -234,6 +234,34 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
         background-color: $color_blue;
     }
 }
+.arrow {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-top: 10px solid $color_white;
+    border-right: 10px solid $color_white;
+    &-right {
+        transform: rotate(45deg);
+    }
+    &-left {
+        transform: rotate(-135deg);
+    }
+  }
+  .slide_content{
+      position: absolute;
+      width: 100%;
+      top:52%;
+      transform: translateY(-52%);
+      h2{
+          color: $color_white;
+          font-family: $Klavika_bold;
+          padding-left: 50px;
+          font-size: 38px;
+            float: left;
+            width: 40%;
+            line-height: 42px;
+      }
+  }
 @include mq-min(tablet-wide){
     .hero_section{
         &-banner{
