@@ -5,6 +5,14 @@
             width:280px;
         }
     }
+    &_landing-page{
+        position: relative;
+        z-index:200;
+        margin-bottom:-100px;
+        .page_logo{
+            width:280px;
+        }
+    }
 }
 .main_menu{
     position: absolute;
