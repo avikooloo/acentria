@@ -162,6 +162,11 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 }
 .content_pod{
     position: relative;
+    img{
+        width: 90%;
+        display: block;
+        margin:auto auto 30px;
+    }
     &-wrapper{
         text-align: center;
     }
@@ -260,6 +265,13 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
         }
         h5{
             font-size: 16px;
+        }
+    }
+    .intro_content-section{
+        .content_section{
+            li{
+                margin-bottom: 40px;
+            }
         }
     }
 }
