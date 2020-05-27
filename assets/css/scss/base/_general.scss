@@ -84,9 +84,13 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
             }
         }
     }
+    &-column{
+        display: grid;
+    }
 }
 .form_section{
     display: flex;
+    padding-top:42px;
     li{
         width:50%;
     }

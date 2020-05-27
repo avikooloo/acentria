@@ -196,9 +196,13 @@ html {
   display: inline;
   font-family: "Klavika Md";
 }
+.content-column {
+  display: grid;
+}
 
 .form_section {
   display: flex;
+  padding-top: 42px;
 }
 .form_section li {
   width: 50%;
