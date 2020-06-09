@@ -210,10 +210,15 @@ html {
 .form_section input, .form_section textarea {
   width: 80%;
   background-color: #f5f6f7;
+  border: 1px solid #f5f6f7;
   border: 0;
   padding: 18px 12px;
   margin-bottom: 16px;
   border-radius: 6px;
+  transition: ease 0.4s;
+}
+.form_section input:hover, .form_section textarea:hover {
+  border: 1px solid #252a2f;
 }
 .form_section textarea, .form_section button {
   float: right;
@@ -252,17 +257,25 @@ html {
   color: #ffffff;
   text-decoration: none;
 }
-.footer_section ul {
+.footer_section .sm_link {
+  display: flex;
+}
+.footer_section .sm_link a {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.footer_section .footer_menu {
   float: right;
 }
-.footer_section ul li {
+.footer_section .footer_menu li {
   display: inline-block;
   border-right: 1px solid #ffffff;
 }
-.footer_section ul li:last-child {
+.footer_section .footer_menu li:last-child {
   border-right: 0;
 }
-.footer_section ul a {
+.footer_section .footer_menu a {
   padding: 0 12px;
   line-height: 1;
 }
@@ -383,7 +396,7 @@ html {
 
 @media only screen and (min-width: 1024px) {
   .hero_section-banner {
-    height: 600px;
+    height: 400px;
   }
 
   .slide_viewer {
@@ -434,7 +447,7 @@ html {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero_section-banner {
-    height: 500px;
+    height: 300px;
   }
 
   .slide_viewer {
@@ -443,7 +456,7 @@ html {
 }
 @media (min-width: 560px) and (max-width: 767px) {
   .hero_section-banner {
-    height: 400px;
+    height: 250px;
   }
 
   .slide_viewer {
@@ -452,7 +465,7 @@ html {
 }
 @media only screen and (max-width: 559px) {
   .hero_section-banner {
-    height: 300px;
+    height: 250px;
   }
 
   .slide_viewer {
@@ -462,6 +475,10 @@ html {
 /* --- LAYOUT ---*/
 .about_us-banner {
   background-image: url("../imgs/about_us.jpg");
+}
+
+.business-banner {
+  background-image: url("../imgs/business-banner.jpg");
 }
 
 .contact_us-banner {
@@ -491,8 +508,29 @@ html {
   font-size: 13px;
 }
 .main_menu li {
-  display: inline-block;
   padding: 0 18px;
+  display: inline-block;
+  float: left;
+  text-transform: uppercase;
+}
+.main_menu li ul {
+  background-color: #fff;
+  z-index: 100;
+}
+.main_menu li ul a {
+  font-family: "Klavika Md";
+  color: #666;
+  font-size: 12px;
+}
+.main_menu li ul a:hover {
+  columns: #333;
+}
+.main_menu li li {
+  display: block;
+  float: none;
+}
+.main_menu li li:hover {
+  background-color: #ddd;
 }
 .main_menu a {
   color: #ffffff;
@@ -510,13 +548,213 @@ html {
   background-color: #000000;
   color: #da3832;
   font-family: "Klavika Md";
-  padding: 12px 0;
+  padding: 6px 0;
+  overflow: hidden;
 }
 .top_strip .contacts {
+  float: left;
   font-size: 11px;
+  padding-top: 8px;
 }
 .top_strip .contacts li {
   display: inline-block;
+}
+.top_options {
+  float: right;
+  display: flex;
+}
+.top_options input {
+  border: none;
+  border-radius: 4px;
+  height: 24px;
+  padding: 0 6px;
+}
+
+.lang_option {
+  font-size: 10px;
+  line-height: 1;
+  color: #ffffff;
+  margin-top: 12px;
+}
+.lang_option ul {
+  display: flex;
+}
+.lang_option li {
+  padding: 0 12px;
+}
+.lang_option li:last-child {
+  border-left: 1px solid #ffffff;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #FFF;
+}
+
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* Positioning the navigation items inline */
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+  display: none;
+  position: absolute;
+  /* has to be the same number as the "line-height" of "nav a" */
+  top: 20px;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+  position: relative;
+  top: -20px;
+  /* has to be the same number as the "width" of "nav ul ul li" */
+  left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:only-child:after {
+  content: "";
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media all and (max-width: 768px) {
+  nav {
+    margin: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+.menu {
+    display: none;
+  }
+
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    background-color: #254441;
+    padding: 14px 20px;
+    color: #FFF;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .toggle:hover {
+    background-color: #000000;
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul .toggle,
+nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a:hover,
+nav ul ul ul a {
+    background-color: #000000;
+  }
+
+  nav ul li ul li .toggle,
+nav ul ul a,
+nav ul ul ul a {
+    padding: 14px 20px;
+    color: #FFF;
+    font-size: 17px;
+  }
+
+  nav ul li ul li .toggle,
+nav ul ul a {
+    background-color: #212121;
+  }
+
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+
+  /* Hide menus on hover */
+  nav ul ul li:hover > ul,
+nav ul li:hover > ul {
+    display: none;
+  }
+
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+  }
+}
+@media all and (max-width: 330px) {
+  nav ul li {
+    display: block;
+    width: 94%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

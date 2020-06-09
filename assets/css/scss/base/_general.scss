@@ -97,10 +97,15 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
     input,textarea{
         width: 80%;
         background-color: #f5f6f7;
+        border: 1px solid #f5f6f7;
         border: 0;
         padding:18px 12px;
         margin-bottom: 16px;
         border-radius: 6px;
+        transition: ease 0.4s;
+        &:hover{
+            border: 1px solid darken($color: #f5f6f7, $amount: 80);
+        }
     }
     textarea,button{
         float: right;
@@ -137,7 +142,18 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
         color: $color_white;
         text-decoration: none;
     }
-    ul{
+    .sm_link{
+        display: flex;
+        li{
+
+        }
+        a{
+            width:30px;
+            height: 30px;
+            display: block;
+        }
+    }
+    .footer_menu{
         float: right;
         li{
             display: inline-block;
@@ -269,7 +285,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 @include mq-min(tablet-wide){
     .hero_section{
         &-banner{
-            height:600px;
+            height:400px;
         }
     }
     .slide_viewer{
@@ -331,7 +347,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 @include respond-between(tablet,tablet-wide){
     .hero_section{
         &-banner{
-            height:500px;
+            height:300px;
         }
     }
     .slide_viewer{
@@ -341,7 +357,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 @include respond-between(phablet,tablet){
     .hero_section{
         &-banner{
-            height:400px;
+            height:250px;
         }
     }
     .slide_viewer{
@@ -351,7 +367,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 @include mq-max(phablet){
     .hero_section{
         &-banner{
-            height:300px;
+            height:250px;
         }
     }
     .slide_viewer{

@@ -47,6 +47,9 @@
 .btn_blue{
     background-color: $color_busara-blue;
 }
+.top_options{
+    float: right;
+}
 @include mq-min(tablet-small){
     .btn_content{
         max-width: 200px;
