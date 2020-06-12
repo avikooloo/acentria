@@ -39,14 +39,13 @@
         padding: 0 18px;
         display:inline-block;
         float: left;
-        text-transform: uppercase;
         ul{
             background-color: #fff;
             z-index: 100;
             a{
                 font-family: $Klavika_medium;
                 color: #666;
-                font-size: 12px;
+                font-size: 14px;
                 &:hover{
                     color:#333;
                 }

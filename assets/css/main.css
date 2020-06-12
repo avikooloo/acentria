@@ -523,7 +523,6 @@ html {
   padding: 0 18px;
   display: inline-block;
   float: left;
-  text-transform: uppercase;
 }
 .main_menu li ul {
   background-color: #fff;
@@ -532,7 +531,7 @@ html {
 .main_menu li ul a {
   font-family: "Klavika Md";
   color: #666;
-  font-size: 12px;
+  font-size: 14px;
 }
 .main_menu li ul a:hover {
   color: #333;
