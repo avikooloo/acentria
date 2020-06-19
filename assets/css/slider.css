@@ -4,7 +4,7 @@
 }
 
 .slide_viewer {
-  overflow: hidden;
+  /*overflow: hidden;*/
   position: relative;
 }
 

@@ -137,15 +137,6 @@ html {
   background-color: #f2f2f2;
 }
 
-.page_logo {
-  overflow: hidden;
-  display: block;
-}
-.page_logo img {
-  display: block;
-  width: 100%;
-}
-
 .hero_section {
   background-color: #000000;
 }
@@ -489,9 +480,6 @@ html {
 .header_inside-page {
   background: url("../imgs/header_bg.gif");
 }
-.header_inside-page .page_logo {
-  width: 280px;
-}
 .header_inside-page a:hover {
   color: #320b0a;
 }
@@ -503,9 +491,6 @@ html {
   z-index: 200;
   margin-bottom: -100px;
 }
-.header_landing-page .page_logo {
-  width: 280px;
-}
 .header_landing-page a:hover {
   color: #ccc;
 }
@@ -513,19 +498,11 @@ html {
   color: #ccc;
 }
 
-.main_menu {
-  position: absolute;
-  top: 36px;
-  left: 300px;
-  font-size: 13px;
-}
 .main_menu li {
-  padding: 0 18px;
   display: inline-block;
   float: left;
 }
 .main_menu li ul {
-  background-color: #fff;
   z-index: 100;
 }
 .main_menu li ul a {
@@ -539,6 +516,7 @@ html {
 .main_menu li li {
   display: block;
   float: none;
+  border-bottom: 1px solid #ddd;
 }
 .main_menu li li:hover {
   background-color: #ddd;
@@ -547,6 +525,8 @@ html {
   color: #ffffff;
   font-family: "Klavika Bd";
   text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 
 .top_strip {
@@ -662,16 +642,12 @@ h1 {
   display: none;
 }
 
-/* Since we'll have the "ul li" "float:left"
- * we need to add a clear after the container. */
 nav:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Removing padding, margin and "list-style" from the "ul",
- * and adding "position:reltive" */
 nav ul {
   float: right;
   padding: 0;
@@ -680,14 +656,10 @@ nav ul {
   position: relative;
 }
 
-/* Positioning the navigation items inline */
-/* Hide Dropdowns by Default
- * and giving it a position of absolute */
 nav ul ul {
   display: none;
   position: absolute;
-  /* has to be the same number as the "line-height" of "nav a" */
-  top: 20px;
+  top: 27px;
 }
 
 nav ul ul li {
@@ -701,7 +673,7 @@ nav ul li:hover > ul {
 
 /* Fisrt Tier Dropdown */
 nav ul ul li {
-  width: 170px;
+  width: 200px;
   float: none;
   display: list-item;
   position: relative;
@@ -725,31 +697,134 @@ li > a:only-child:after {
 
 /* Media Queries
 --------------------------------------------- */
-@media all and (max-width: 768px) {
+.page_logo {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+.page_logo img {
+  display: block;
+  width: 100%;
+}
+
+@media all and (max-width: 330px) {
+  nav ul li {
+    display: block;
+    width: 94%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .page_logo {
+    width: 287px;
+    top: 0;
+  }
+
+  .main_menu {
+    padding-top: 42px;
+    padding-bottom: 12px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .page_logo {
+    width: 14%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .main_menu {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main_menu li {
+    padding: 6px 18px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .page_logo {
+    width: 150px;
+    top: 5px;
+  }
+
   nav {
     margin: 0;
   }
 
-  /* Hide the navigation menu by default */
-  /* Also hide the  */
+  .menu {
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 58px;
+    z-index: 200;
+  }
+  .menu a, .menu label {
+    font-family: "Klavika Lt";
+    color: #000000;
+    padding: 6px 18px;
+    display: block;
+  }
+  .menu label {
+    position: relative;
+  }
+  .menu label::after, .menu label::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #999;
+    right: 18px;
+  }
+  .menu label::after {
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menu label::before {
+    transform: rotate(90deg);
+    top: 47%;
+  }
+
+  .main_menu ul {
+    padding: 6px 18px;
+  }
+  .main_menu li {
+    border-bottom: 1px solid #ddd;
+  }
+  .main_menu li:last-child {
+    border: none;
+  }
+
   .toggle + a,
 .menu {
     display: none;
   }
 
-  /* Stylinf the toggle lable */
-  .toggle {
-    display: block;
-    background-color: #254441;
-    padding: 14px 20px;
+  .menu-toggle {
+    background-color: #000000;
+    font-family: "Klavika Bd";
+    float: right;
+    background-color: #000000;
+    padding: 12px;
     color: #FFF;
     font-size: 17px;
+  }
+  .menu-toggle:hover {
+    color: #000000;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .toggle {
+    display: block;
     text-decoration: none;
     border: none;
   }
 
   .toggle:hover {
-    background-color: #000000;
+    background-color: #ddd;
   }
 
   /* Display Dropdown when clicked on Parent Lable */
@@ -774,7 +849,7 @@ nav ul ul a {
 
   nav a:hover,
 nav ul ul ul a {
-    background-color: #000000;
+    background-color: #ddd;
   }
 
   nav ul li ul li .toggle,
@@ -787,7 +862,7 @@ nav ul ul ul a {
 
   nav ul li ul li .toggle,
 nav ul ul a {
-    background-color: #212121;
+    background-color: #eee;
   }
 
   /* Hide Dropdowns by Default */
@@ -815,10 +890,54 @@ nav ul li:hover > ul {
     /* has to be the same number as the "width" of "nav ul ul li" */
   }
 }
-@media all and (max-width: 330px) {
-  nav ul li {
-    display: block;
-    width: 94%;
+.content_tabs .main {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 100%;
+  text-align: center;
+}
+.content_tabs .content {
+  background: #fff;
+  color: #373737;
+  text-align: left;
+  clear: both;
+  border-top: 1px solid #ddd;
+}
+.content_tabs .content > div {
+  display: none;
+}
+.content_tabs input {
+  display: none;
+}
+.content_tabs label {
+  padding: 6px 18px;
+  color: #373737;
+  float: left;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.content_tabs label:hover {
+  background: #ddd;
+  color: #373737;
+}
+.content_tabs input:checked + label {
+  background: #ddd;
+  color: #373737;
+}
+.content_tabs #tab1:checked ~ .content #content1,
+.content_tabs #tab2:checked ~ .content #content2,
+.content_tabs #tab3:checked ~ .content #content3,
+.content_tabs #tab4:checked ~ .content #content4 {
+  display: block;
+}
+@media screen and (max-width: 400px) {
+  .content_tabs label {
+    padding: 15px 10px;
   }
 }
 
